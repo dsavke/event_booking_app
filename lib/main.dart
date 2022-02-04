@@ -1,6 +1,7 @@
-// ignore_for_file: prefer_const_constructors
-
+import 'package:event_booking_app/screens/register_screen/register_screen.dart';
+import 'package:event_booking_app/utils/constants/routes.dart';
 import 'package:flutter/material.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -11,13 +12,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Flutter Demo',
-      home: Scaffold(
-        body: Center(
-          child: Text('Event booking app'),
-        ),
-      ),
+      home: RegisterScreen()
     );
   }
 }
