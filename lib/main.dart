@@ -1,6 +1,6 @@
-import 'package:event_booking_app/screens/register_screen/register_screen.dart';
-import 'package:event_booking_app/utils/constants/routes.dart';
 import 'package:flutter/material.dart';
+
+import 'screens/register_screen/register_screen.dart';
 
 
 void main() {

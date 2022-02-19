@@ -4,12 +4,12 @@ class CustomButton extends StatelessWidget {
   final  onTap;
   final String btnTxt;
   final Color backgroundColor;
-  CustomButton({ required this.onTap,  required this.btnTxt, required this.backgroundColor});
+  CustomButton({ this.onTap,  required this.btnTxt, required this.backgroundColor});
 
   @override
   Widget build(BuildContext context) {
     final ButtonStyle flatButtonStyle = TextButton.styleFrom(
-      backgroundColor:  MyTheme.accent_color ,
+      backgroundColor:  MyColors.accentColor ,
       minimumSize: Size(MediaQuery.of(context).size.width, 52),
       padding: EdgeInsets.zero,
       shape: RoundedRectangleBorder(
@@ -17,14 +17,11 @@ class CustomButton extends StatelessWidget {
       ),
     );
 
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15),
-      child: TextButton(
+    return  TextButton(
         onPressed: onTap,
         style: flatButtonStyle,
         child: Text(btnTxt,
-            style: Theme.of(context).textTheme.headline3?.copyWith(color: MyTheme.white, fontSize: 16)),
-      ),
+            style: Theme.of(context).textTheme.headline3?.copyWith(color: MyColors.whiteColor, fontSize: 16)),
     );
   }
 }
